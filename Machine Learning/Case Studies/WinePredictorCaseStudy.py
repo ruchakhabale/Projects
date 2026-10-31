@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.preprocessing import  StandardScaler
 
-def MarvellousClassifier(Datapath):
+def Classifier(Datapath):
     border = "-"*40
     
 
@@ -28,7 +28,7 @@ def MarvellousClassifier(Datapath):
     print("Step 2: Clean the dataset")
     print(border)
 
-    df.dropna(inplace= True)  # missing value udun takto from dataframes
+    df.dropna(inplace= True) 
 
     print("Shape of dataset: ", df.shape)
     print("Total records: ", df.shape[0])
@@ -121,9 +121,8 @@ def MarvellousClassifier(Datapath):
     plt.show()
 
 
-
 def main():
-    MarvellousClassifier("WinePredictor.csv")
+    Classifier("WinePredictor.csv")
 
 
 if __name__ == "__main__":
